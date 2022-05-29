@@ -13,10 +13,14 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="使用Hexo搭建个人博客1. 环境准备需要node环境支持：node 下载完之后用 npm 下载 cnpm 12# npm 是node官方的包管理器，网络原因下载速度慢，cnpm 是国内的，下载速度快npm install -g cnpm --registry&#x3D;https:&#x2F;&#x2F;registry.npm.taobao.org  2. 下载hexo1cnpm install -g hexo-cli">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://zjx-1304503410.cos.ap-shanghai.myqcloud.com/image/202205292132270.png">
+<meta property="og:image" content="https://zjx-1304503410.cos.ap-shanghai.myqcloud.com/image/202205292134858.png">
+<meta property="og:image" content="http://example.com/%E4%BD%BF%E7%94%A8Hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2.assets/image-20220529213543134.png">
 <meta property="article:published_time" content="2022-05-29T12:34:56.680Z">
-<meta property="article:modified_time" content="2022-05-29T12:34:57.218Z">
+<meta property="article:modified_time" content="2022-05-29T15:47:44.999Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://zjx-1304503410.cos.ap-shanghai.myqcloud.com/image/202205292132270.png">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -91,19 +95,30 @@
 
 <h2 id="2-下载hexo"><a href="#2-下载hexo" class="headerlink" title="2. 下载hexo"></a>2. 下载hexo</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install -g hexo-cli</span><br></pre></td></tr></table></figure>
 
-<h2 id="3-初始化hexo"><a href="#3-初始化hexo" class="headerlink" title="3. 初始化hexo"></a>3. 初始化hexo</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">打开gitbash</span></span><br><span class="line">hexo init</span><br></pre></td></tr></table></figure>
+<h2 id="3-初始化hexo"><a href="#3-初始化hexo" class="headerlink" title="3. 初始化hexo"></a>3. 初始化hexo</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">提前创建一个文件夹比如：blog,作为个人博客文章存放的地方</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">进入blog打开gitbash</span></span><br><span class="line">hexo init</span><br></pre></td></tr></table></figure>
 
-<h2 id="4-启动hexo"><a href="#4-启动hexo" class="headerlink" title="4. 启动hexo"></a>4. 启动hexo</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">提前创建一个文件夹比如：blog,作为个人博客文章存放的地方，然后<span class="built_in">cd</span> 进去</span></span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+<h2 id="4-启动hexo"><a href="#4-启动hexo" class="headerlink" title="4. 启动hexo"></a>4. 启动hexo</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure>
 
 <h2 id="5-创建文章"><a href="#5-创建文章" class="headerlink" title="5. 创建文章"></a>5. 创建文章</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">创建文章前需要通过Ctrl + C 退出 hexo</span></span><br><span class="line">hexo n &quot;文章名称&quot;  # 创建后会在blog文件夹下的source下生成</span><br></pre></td></tr></table></figure>
 
-<h2 id="发布文章"><a href="#发布文章" class="headerlink" title="发布文章"></a>发布文章</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">首先需要退回到blog文件夹下</span></span><br><span class="line">hexo clean</span><br><span class="line">hexo generate</span><br></pre></td></tr></table></figure>
+<h2 id="6-发布文章"><a href="#6-发布文章" class="headerlink" title="6. 发布文章"></a>6. 发布文章</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">首先需要退回到blog文件夹下</span></span><br><span class="line">hexo clean</span><br><span class="line">hexo generate</span><br></pre></td></tr></table></figure>
 
+<h2 id="7-部署hexo到gitee上"><a href="#7-部署hexo到gitee上" class="headerlink" title="7. 部署hexo到gitee上"></a>7. 部署hexo到gitee上</h2><p>目前gitee的仓库公开还需要通过审核，本人一直出现内容简单，完善真实简介和readme。公开仓库后面再说吧</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">部署前需要先下载一个插件</span></span><br><span class="line">cnpm install --save hexo-deployer-git</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://zjx-1304503410.cos.ap-shanghai.myqcloud.com/image/202205292132270.png"></p>
+<p>下载完成后在blog 文件夹下有个config.yml</p>
+<p><img src="https://zjx-1304503410.cos.ap-shanghai.myqcloud.com/image/202205292134858.png"></p>
+<p>编辑该配置文件(文件最后)</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">Deployment</span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash"><span class="comment"># Docs: https://hexo.io/docs/one-command-deployment</span></span></span><br><span class="line">deploy:</span><br><span class="line">  type: &#x27;git&#x27;</span><br><span class="line">  repo: https://gitee.com/hnzjx/blog.git</span><br><span class="line">  branch: master</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><img src="/%E4%BD%BF%E7%94%A8Hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2.assets/image-20220529213543134.png" alt="image-20220529213543134"></p>
+<p>保存退出后，在blog目录中，输入命令：<code>hexo d</code>,将hexo相关文件推送到仓库中</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/05/29/%E4%BD%BF%E7%94%A8Hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" data-id="cl3rabra00001ywuv6o6x1ye0" data-title="" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/05/29/%E4%BD%BF%E7%94%A8Hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" data-id="cl3rjp3h80000lguvgnne0jle" data-title="" class="article-share-link">Share</a>
       
       
       
@@ -111,16 +126,6 @@
   </div>
   
     
-<nav id="article-nav">
-  
-  
-    <a href="/2022/05/29/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Hello World</div>
-    </a>
-  
-</nav>
-
   
 </article>
 
@@ -155,10 +160,6 @@
         
           <li>
             <a href="/2022/05/29/%E4%BD%BF%E7%94%A8Hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">(no title)</a>
-          </li>
-        
-          <li>
-            <a href="/2022/05/29/hello-world/">Hello World</a>
           </li>
         
       </ul>
